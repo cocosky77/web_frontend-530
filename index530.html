@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>2work Coffee</title>
+        <style>
+            body {
+                background-color: #c3b093;
+                background-image: url('https://user-images.githubusercontent.com/98439117/170386231-901d188e-f2d0-4782-9520-5c308d280539.png');
+                background-size: 55% 70%;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: 50% 65%;
+            }
+            .main_title {
+                font-size: 100px;
+                font-family: serif, Arial;
+                font-style: italic;
+                font-weight: bold;
+                color:#916b45;
+                text-align: center;
+                text-shadow: 7px 7px 2px #ff5ce4, 13px 13px 2px #475AFF;
+            }
+            .main_title:hover {
+                color: #ffffff;
+            }
+            .main_title:active {
+                color:aquamarine;
+            }
+            .main_name {
+                font-size: 35px;
+                font-family: sans-serif, Arial;
+                font-weight: bold;
+                color: #916b45;
+                text-align: right;
+                text-shadow: 7px 7px 2px #ff5ce4, 13px 13px 2px #475AFF;
+            }
+            .main_name:hover {
+                color: #ffffff;
+            }
+            a {
+                text-decoration: none;
+            }
+            .mainfont {
+                font-size: 35px;
+                font-family: sans-serif, Arial;
+                font-weight: bold;
+                color: #ffffff;
+                text-align: center;
+                line-height: 150px;
+            }
+            .menu_list {
+                width: 250px; height: 300px;
+                border-radius: 10%;
+                border-width: thick;
+                border-style: dashed;
+                border-color: rgb(127, 180, 255);
+                overflow: hidden;
+                background-color: #B69573;
+                position: absolute;
+                position: fixed;
+                left: 80%;
+            }
+            .menu_title {
+                font-size: 40px;
+                font-family: sans-serif, Arial;
+                font-weight: bold;
+                color: #ffffff;
+                text-align: center;
+            }
+            .menu_detail {
+                font-size: 25px;
+                font-family: sans-serif, Arial;
+                font-weight: bold;
+                color: #ffffff;
+                text-align: left;
+            }
+            .introduce_1 {
+                font-size: 50px;
+                font-family: sans-serif, Arial;
+                font-weight: bold;
+                background: #ffffff;
+                color: #66d2ce;
+            }
+            .introduce_2 {
+                font-size: 25px;
+                font-family: sans-serif, Arial;
+                color: #ffffff;
+            }
+            .img_1 {
+                position: absolute;
+                left: 45%; top: 60%;
+                border-radius: 30%;
+                overflow: hidden;
+                box-shadow: 13px 13px 20px #ffff7f;
+            }
+            .img_2 {
+                position: absolute;
+                left: 60%; top: 53%;
+            }
+            .cat {
+                position: absolute;
+                left: 45%; top: 90%;
+                border-radius: 30%;
+                border-color: #ffff7f;
+                border-style: solid;
+                border-width: 10px;
+            }
+            .box_font {
+                font-size: 20px;
+                font-style: italic;
+                color: #ffffff;
+                text-align: center;
+            }
+            .box_button {
+                width: 150px; height: 150px;
+                border-radius: 20%;
+                border-width: thick;
+                border-style: solid;
+                border-color: #ff5ce4;
+                position: absolute;
+                background-color: #c69aff;
+                left: 40%; top: 145%;
+            }
+            .box_button > a {
+                display: block;
+                line-height: 150px;
+            }
+            .box_button2 {
+                width: 150px; height: 150px;
+                border-radius: 20%;
+                border-width: thick;
+                border-style: solid;
+                border-color: #ff5ce4;
+                position: absolute;
+                background-color: #9addff;
+                left: 53%; top: 145%;
+            }
+            .box_button2 > a {
+                display: block;
+                line-height: 150px;
+            }
+            .box_button3 {
+                width: 150px; height: 150px;
+                border-radius: 20%;
+                border-width: thick;
+                border-style: solid;
+                border-color: #ff5ce4;
+                position: absolute;
+                background-color: #4fd5b4;
+                left: 66%; top: 145%;
+            }
+            .box_button3 > a {
+                display: block;
+                line-height: 150px;
+            }
+            .list1 {
+                font-size: 40px;
+                font-family: sans-serif, Arial;
+                font-weight: bold;
+                color: #916b45;
+                text-align: left;
+            }
+            ol > a > li{
+                font-size: 20px;
+                font-family: sans-serif, Arial;
+                color: #ffffff;
+                text-align: left;
+            }
+            .list_title {
+                font-size: 30px;
+                font-family: sans-serif, Arial;
+                font-weight: bold;
+                color: #916b45;
+                text-align: left;
+            }
+            p {
+                font-size: 15px;
+                font-family: sans-serif, Arial;
+                color: #ffffff;
+                text-align: left;
+            }
+            .img1 {
+                position: absolute;
+                left: 30%; top: 195%;
+                border-radius: 5%;
+                overflow: hidden;
+                box-shadow: 13px 13px 30px #ff67fa;
+            }
+            .img2 {
+                border-radius: 5%;
+                float: left;
+                border-color: #94ddff;
+                border-style: double;
+                border-width: 10px;
+            }
+            .img3 {
+                border-radius: 5%;
+                float: right;
+            }
+            .title_name {
+                font-size: 40px;
+                font-family: sans-serif, Arial;
+                font-weight: bold;
+                color: #916b45;
+                text-align: left;
+            }
+            .title_sub {
+                font-size: 15px;
+                font-family: sans-serif, Arial;
+                color: #ffffff;
+                text-align: left;
+            }
+            .title_sub_mini {
+                font-size: 15px;
+                font-family: sans-serif, Arial;
+                color: #ffffff;
+                text-align: left;
+            }
+            .thanks {
+                border-radius: 5%;
+                float: right;
+                border-color: #94ddff;
+                border-style: solid;
+                border-width: 10px;
+            }
+            .webtop {
+                border-radius: 5%;
+                float: left;
+                border-color: #94afff;
+                border-style: solid;
+                border-width: 10px;
+            }
+            .WYSIWYG {
+                border-radius: 5%;
+                float: left;
+                border-color: #94ffe2;
+                border-style: solid;
+                border-width: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div><!--메인 부분-->
+
+            <a href="2work Coffee.html"><div class="main_title">Coffee</div></a>
+            <div class="main_name">빅데이터과<br>2201772 장하늘</div>
+
+            <audio controls="controls" loop="loop">
+                <source src="Mosswood - Steve Adams.mp3" type="audio/mp3">
+                <source src="Mosswood - Steve Adams.ogg" type="audio/ogg">
+            </audio>
+
+            <div class="menu_list menu_title">목차
+                <ul>
+                    <a href="2work Coffee.html" class="menu_detail"><li>Coffee(맨 위로)</li></a>
+                    <a href="#introduce" class="menu_detail"><li>나의 소개</li></a>
+                    <a href="#contents" class="menu_detail"><li>커피(Coffee)</li></a>
+                    <a href="#webtop" class="menu_detail"><li>Webtop</li></a>
+                    <a href="#WYSIWYG" class="menu_detail"><li>WYSIWYG</li></a>
+                    <a href="#review" class="menu_detail"><li>제작 후기</li></a>
+                </ul>
+            </div> 
+    
+        </div>
+
+        <div><!--나의 소개 부분-->
+
+            <div>
+                <a id="introduce"><p class="introduce_1">나의 소개</p></a>
+
+                <video controls="controls" width="600" height="400">
+                    <source src="introduce_hello_world.mp4" type="video/mp4">
+                    <source src="introduce_hello_world.webm" type="video/webm">
+                </video>
+
+                <div>
+                    <img src="https://user-images.githubusercontent.com/98439117/168506750-85f9148e-b8d5-4fe0-ab98-f3f174168630.png" class="img_1" width="12%" height="24%">
+                    <img src="https://user-images.githubusercontent.com/98439117/168506853-1be8bc97-b806-49d3-99f9-7bea67702201.png" class="img_2" width="20%" height="40%">
+                    <img src="https://user-images.githubusercontent.com/98439117/168506537-90b50a71-ba8d-4a69-b743-12351d5f19fa.jpg" class="cat" width="30%" height="50%">
+                </div>
+
+                <p class="introduce_2">
+                    <b>이름</b> : 장하늘<br>
+                    <i>나이</i> : 20세(만 18세)<br>
+                    <small>성별</small> : 여<br>
+                    <sub>학교</sub> : 한양여자대학교<br>
+                    <sup>학과</sup> : 빅데이터과<br>
+                    <del>혈액형</del> : AB형<br>
+                    <ins>MBTI</ins> : ISTP-T(만능 재주꾼)<br>
+                    가족관계 : 엄마, 아빠 (=외동)<br>
+                    취미 : 음악듣기, 게임하기<br>
+                    좋아하는 것 : 커피, 떡볶이, 우주, 외계인<br>
+                    싫어하는 것 : 가지, 브로콜리, 운동하기<br>
+                    좋아하는 영화 장르 : 액션, 판타지, 로맨스<br>
+                    좋아하는 음악 장르 : 컨트리, 포크
+                </p>
+                </div>
+                <div class="box_button">
+                    <a href="#" class="box_font">Introduce Me</a>
+                </div>
+        
+                <div class="box_button2">
+                    <a href="#" class="box_font">Hello World</a>
+                </div>
+        
+                <div class="box_button3">
+                    <a href="#" class="box_font">Big Data</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div><!--Coffee(콘텐츠)부분-->
+
+            <div>
+                <a id="contents"><p class="introduce_1">커피(Coffee)</p></a>
+
+                <a class="list1">목차</a>
+
+                    <ol>
+                        <a href="#summary"><li>개요</li></a>
+
+                        <a href="#etymology"><li>어원</li></a>
+
+                        <a href="#korea"><li>한국으로 전래</li></a>
+
+                        <a href="#kind"><li>
+                            품종
+                            <ul>
+                                <li>아라비카</li>
+                                <li>로부스타(카네포라)</li>
+                                <li>리베리카</li>
+                                <li>샤리에</li>
+                                <li>아라부스타</li>
+                            </ul>
+                        </li></a>
+
+                        <a href="#processing"><li>
+                            가공 및 제조
+                            <ul>
+                                <li>가공</li>
+                                <li>볶기</li>
+                                <li>보관</li>
+                                <li>그라인더</li>
+                                <li>물</li>
+                            </ul>
+                        </li></a>
+
+                        <a href="#efficacy"><li>
+                            효능 및 부작용
+                            <ul>
+                                <li>효능</li>
+                                <li>부작용</li>
+                            </ul>
+                        </li></a>
+
+                        <a href="#mistake"><li>오해</li></a>
+
+                        <a href="#tip"><li>즐기기 위한 팁</li></a>
+                    </ol>
+                    <br><hr><hr><br>
+            </div>
+            <a id="summary" class="list_title">1. 개요</a>
+            <div>
+                <p>
+                    일반적으로 커피 열매(커피 체리)의 씨앗인 커피 콩, 혹은 그 씨앗을 볶은 뒤(로스팅) 갈아서 물에 우려내서 만드는 음료. 커피나무의 열매, 그 열매 속의 씨앗, 씨앗의 껍질을 벗기고 말린 생두, 생두를 볶은 원두, 원두를 분쇄한 가루, 가루에서 추출한 음료까지 모두 '커피'라고 부른다.
+                </p>
+            </div>
+            <hr>
+
+            <a id="etymology" class="list_title">2. 어원</a>
+            <div>
+                <img src="https://user-images.githubusercontent.com/98439117/168507590-52967368-2457-403a-b0f6-7b7d962f6703.jpg" width="15%" height="30%" class="img2">
+                <p>
+                    <b>“커피”</b>라는 단어는 커피의 원산지인 에티오피아의 남서부 “카파”에서 유래되었다는 설과, 커피의 아랍어 명칭 “까후와”에서 유래되었다는 설이 존재한다. 아랍어의 까후와는 ‘배고픔을 줄이다’라는 의미의 ‘까히야’의 변화형으로, 원래 와인의 한 종류를 가리키는 말이었으나, 와인과 유사한 각성효과가 있는 커피에도 붙혀졌다고 한다. 아랍어 까후와는 오스만 투르크어로 흘러 들어갔고, 거기서 유럽인들이 그들의 언어로 차입해 갔다(이탈리아어 caffè, 프랑스어 café, 독일어 Kaffee, 영어 coffee).<br><br>
+                    한국어 단어 “커피”는 영어 coffee에서 온 말이다. 한자로 가배(珈琲) 라고 쓰고, 가비다라고 하거나, 빛깔과 맛이 탕약과 비슷하다 하여 서양에서 들어온 탕이라는 뜻으로 양탕국 등으로 불렸다. 
+                    한편, 커피가 발견된 에티오피아에서는 “분나”(Bunna)라고 부른다.<br><br>
+                    커피를 내리고 남은 찌꺼기는 우리말로 커피박(-剝)이라 하고 영어권에서는 커피퍽(coffee puck)이라 한다.
+                    커피를 마시며 휴식을 취한다는 표현 "coffee break"은 1952년에 처음 발견된다. '커피포트'라는 용어는 1705년에 등장한다.
+                </p>
+            </div>
+            <hr>
+
+            <a id="korea" class="list_title">3. 한국으로 전래</a>
+            <div>
+                <p>
+                    19세기 말 무역이나 선교 등 여러 목적으로 방문한 서양인들을 통해 커피가 퍼지기 시작했다. 1884년 1월 미국인 퍼시벌 로웰이 한강변 창랑정에서 '조선에서는 최신 문물이었던 커피를 식후에 마셨다'고 회고록으로 적은 것이 대한민국 커피와 관련한 가장 오래 된 기록이다. 1884년 알렌도 조선 궁중 시종들이 커피를 대접하였다고 기록했다.<br><br>
+                    양반들은 외국인에게 커피를 선물받으면 두고두고 아껴 마셨다고 하고, 특히 당시 국왕이었던 고종도 커피를 매우 좋아했다고 한다. 단순히 좋아하는 것을 넘어 조예가 있었는지 1898년 실각한 권신 김홍륙이 고종을 암살하려고 고종이 마실 커피에 독약을 탔는데 평소 마시던 커피와 향이 다름을 눈치채고 독살 위기에서 벗어났다는 기록이 있을 정도이다. 그러나 같이 마셨던 당시 황태자였던 순종은 맛의 차이를 눈치채지 못하고 한입 마셨고 두고두고 고생하게 된다.<br><br>
+                    다른 나라들처럼 커피가 처음 유행할 땐 귀하고 비쌌다 보니 상류층 위주로 즐겨 마시는 고급 음료였지만 과거보다 커피 공급 수단이 원활해지고 간편한 인스턴트 방식 커피가 나오면서 이제는 누구나 쉽고 가까이 즐길 수 있는 대중 음료가 되었다.
+                </p>
+            </div>
+            <hr>
+
+            <a id="kind" class="list_title">4. 품종</a>
+            <img src="https://user-images.githubusercontent.com/98439117/168507664-80863215-59bd-4d30-875e-f9cadd3d87a9.jpg" width="30%" height="60%" class="img3">
+            <div>
+                <ul>
+                    <li><p><b>아라비카</b></p></li>
+                    <p>
+                        Coffea arabica라는 종에서 수확한 커피. 인류 역사상 최초로 재배된 종이다. 커피벨트 중에서도 해발 800m 이상의 고산지, 고원에서 주로 생산되며 고급 품종으로 취급된다.<br><br>
+                        고급 품종 치고는 아라비카 품종의 생산량이 커피 시장 전체 70%를 차지한다. 고급 아라비카가 중저가 로부스타보다 더 많을 정도다. 이는 카페에서 파는 커피들이나 개인 취미 생활에 쓰이는 커피가 거의 대부분이 아라비카이기 때문이다. 한국의 로부스타 커피믹스를 보면 전혀 그럴 거 같지 않은데 요즘은 커피믹스 등 여타 가공품들에도 아라비카 원두를 사용하는 경우도 있다.<br><br>
+                        맛과 향이 거친 로부스타에 비해 맛이 부드러우며, 균일하다. 로부스타가 쓴맛이 특징이라면, 아라비카는 신맛이 특징이다. 맛의 개성이 강하기 때문에, 맛의 개량과 병충해 방지 등을 위해 여러 세부 품종으로 또 개발되고 나뉘며 이에 따라 맛이 변한다. 대표적으로 티피카, 버번, 카투아이, 파카마라, 게이샤 등이 있다.   
+                    </p>
+
+                    <li><p><b>로부스타(카네포라)</b></p></li>
+                    <p>
+                        병충해에 강하고 수확량이 많은 Coffea canephora라는 종에서 수확한 커피. 주로 고도가 600m 이하인 낮은 지역에서 나오는 커피들이다.<br><br> 해발이 낮은 지역은 기온이 높아서 커피가 빨리 자라기 때문에 상대적으로 병충해에 강한 로부스타 품종을 재배한다. 로부스타의 Robust라는 말 자체가 튼튼하다는 뜻. 흔히 인스턴트 커피나 믹스커피에 많이 사용된다.
+                    </p>
+
+                    <li><p><b>리베리카</b></p></li>
+                    <p>
+                        장점으로 별로 내세울 게 없다 보니 로부스타와 아라비카에 밀려 상품화에 실패한 품종. 열매 크기는 셋 중에서 가장 크고 길쭉하다. '커피 3대 품종'이니 하는 이론을 이야기할 때나 등장하지 실제로 만나기는 쉽지 않다.<br><br> 일반적으로 아라비카나 로부스타보다 더 쓰고 향은 약하다고 알려져 있다. 즉, 일반적으로 맛이 없다. 덕분에 생산량이 적다. 전 세계 커피 생산량의 1~2% 이하로 알려져 있다.
+                    </p>
+
+                    <li><p><b>샤리에</b></p></li>
+                    <p>
+                        2009년 초중반에 발견된 품종. 프랑스의 앙드레 샤리에가 발견했다고 해서 샤리에라고 불린다. 카메룬에서 발견되었는데 놀랍게도 카페인이 없다고 한다. 디카페인 커피와는 다르다. 디카페인 커피는 일반 원두에 카페인을 줄이는 과정을 거친 것이고, 샤리에는 아예 처음부터 카페인이 없다.
+                    </p>
+
+                    <li><p><b>아라부스타</b></p></li>
+                    <p>
+                        부드러운 맛과 향을 가지는 아라비카와 높은 생산량과 병충해에 강한 로부스타의 장점만을 모아서 교배시킨 아라부스타라는 품종도 있다. 이렇게 재배된 아라부스타는 커피의 품질과 병충해에 대한 저항 개선은 물론 가뭄에 대한 저항성까지 가진다고 한다.
+                    </p>
+                </ul>
+            </div>
+            <hr>
+
+            <a id="processing" class="list_title">5. 가공 및 제조</a>
+            <img src="https://user-images.githubusercontent.com/98439117/168507748-297acf8d-7fa1-45f2-83ef-dc9d88c6e507.jpg" width="20%" height="40%" class="img3">
+            <div>
+                <ul>
+                    <li><p><b>가공</b></p></li>
+                    <p>
+                        커피 열매의 껍질을 벗겨내는 방법은 크게 건식(Natural) 가공과 수세식(Washed) 가공이 있다.<br><br>
+                        건식 가공(내추럴)은 말 그대로 말려서 과육을 떼어내는 것이다. 한국에서 고추를 널어 말리는 것처럼 커피 열매를 널어 말린 뒤 마른 과육을 맷돌이나 절구 등을 이용하여 껍질을 벗겨내는 방식이다. 물이 귀한 중동 지역에서 유래되었다. 말리는 과정 중 특유의 다크초콜릿과 견과류같은 풍미가 생기며 수세식 가공 원두에 비해 자연적인 단맛이 유지되므로 단맛이 은은하게 나서 이러한 풍미를 배가시킨다. 하지만 건식 가공의 단점은 과육의 성분이 원두에 많이 함유되어 있기 때문에 보관이나 가공이 잘못될 경우 특유의 메주같은 쿰쿰한 냄새가 날 수 있다는 것이다.<br><br>
+                        수세식 가공(워시드)은 커피 열매를 물에 담가두어 과육이 불어서 떨어지면 씻어내어 가공하는 것이다. 비교적 물이 풍부한 에티오피아 남부나 케냐에서 유래되었다. 물에 담가두는 중 일종의 발효 작용이 발생하여 독특한 신맛과 복합적인 과일향을 가지게 된다. 수용성인 카페인이 물에 녹아서 어느 정도 빠지기 때문에 카페인 함량이 건식 가공에 비해 낮다.                     
+                    </p>
+
+                    <li><p><b>볶기</b></p></li>
+                    <p>
+                        생두를 굽거나 볶는 과정인 로스팅(roasting)을 거치면 잘 알려진 갈색 빛이 도는 커피 원두가 완성된다. 볶는 정도는 일반적으로 볶는 시간과 불의 온도에 따라 크게 약, 중, 강배전으로 나누며, 이를 '배전도'라고 한다.<br><br> 육안으로 보면 대체로 짧은 시간 동안 구운 원두는 연한 갈색이 나타나고, 오랫동안 구운 원두는 진한 갈색이 되고 윤기(기름기)가 돈다. 커피를 구성하는 맛은 크게 '신맛', '단맛', '쓴맛'으로 나누어 지며, 볶는 시간이 짧으면 신맛이, 길 경우는 쓴맛이 나타나고 단맛은 그 중간 정도에 위치한다.<br><br> 이런 점들을 고려해서 커피 원두가 가진 고유의 특징을 잘 살릴 수 있도록 볶는 정도를 맞추는 것이 정석이다.
+                    </p>
+
+                        <table border="4">
+                            <tr>
+                                <th colspan="2">세계 각국별 배전도</th>
+                            </tr>
+                            <tr>
+                                <th>미국(전반적)</th>
+                                <td>9단계</td>
+                            </tr>
+                            <tr>
+                                <th>북미지역</th>
+                                <td rowspan="2">6단계</td>
+                            </tr>
+                            <tr>
+                                <th>유럽</th>
+                            </tr>
+                            <tr>
+                                <th>일본</th>
+                                <td>8단계</td>
+                            </tr>
+                        </table>
+
+                    <li><p><b>보관</b></p></li>
+                    <p>
+                        갓 볶은 커피는 맛이 없다. 구운 후 이산화 탄소 가스가 적당히 배출되어야 적당한 맛이 난다. 이에 대해서는 사람들마다 의견이 다른데, 간혹 4일 지나야 가장 맛있다고 하는 사람들도 있으며, 볶은 정도에 따라서 이산화 탄소가 배출된 양이 다르기 때문에 약하게 볶은 커피일수록 오래 두어야 한다는 사람도 있다.<br><br>
+                        커피는 그대로 두면 향과 맛이 날아가 버리기 때문에, 밀폐 용기나 커피 보관용 용기에 따로 보관하는 것이 제일 좋다. 거의 모든 식자재가 그렇듯 상온에 오래 보관하는 것은 바람직하지 않다. 특히 원두를 여름 같은 고온의 날씨에서 보관하면 기름이 나오고 산화가 되어 기름냄새, 즉 쩐내가 난다. 커피 전문점이나 로스팅샵에서도 원두 전용 냉장고를 이용한다. 
+                    </p>
+
+                    <li><p><b>그라인더</b></p></li>
+                    <p>
+                        그라인더는 커피 용품 중 가장 중요한 물건이라고 할 수 있으며, 원두 다음으로 가장 투자를 많이 하는 것이 좋다.<br><br> 커피의 분쇄도가 커피 맛에 대단히 큰 영향을 미치기 때문인데, 일반적으로 분쇄 정도가 균일하고 미분이 적은 것을 좋은 분쇄로 친다. 취향에 따라 분쇄되는 알갱이의 크기도 조절할 수 있으니 자신의 취향을 맞추거나 원두에 따라 분쇄도를 달리 할 수 있다.<br><br> 종류는 크게 스크류가 달린 용기에 원두를 넣고 직접 레버를 돌려 분쇄하는 핸드밀, 마치 믹서기처럼 기계 안에 원두를 넣고 전력을 넣으면 알아서 분쇄해 주는 전동 그라인더가 있다. 
+                    </p>
+
+                    <li><p><b>물</b></p></li>
+                    <p>
+                        커피에 쓰는 물은 완전한 연수보다는 적절히 경도가 있는 물이 더 시너지가 좋다. 약한 센물(아경수)를 사용하는 것이 이상적이다.<br><br> 특히 외국에서 로스팅한 커피는 그 나라의 물에 맞도록, 곧 연수가 대부분인 한국보다 높은 경도의 물에 맞춰 로스팅하기 때문에 한국 평균보다 높은 경도의 물을 써야 그 로스터의 의도에 맞는 추출이 가능하다.
+                    </p>
+                </ul>
+            </div>
+            <hr>
+
+            <a id="efficacy" class="list_title">6. 효능 및 부작용</a>
+            <img src="https://user-images.githubusercontent.com/98439117/168507890-f2a83e52-37d1-4e1d-b5c5-279b6fbe6500.jpg" width="15%" height="40%" class="img3">
+            <div>
+                <ul>
+                    <li><p><b>효능</b></p></li>
+                    <p>
+                        두통을 어느 정도 해소해주고, 심장 질환의 위험을 줄여주며 심장 마비의 가능성을 낮춰준다. 그리고 일부 암 발생 확률을 줄여주고 기분을 좋게 만들어준다.<br>
+                        또한 심한 운동을 마친 운동 선수들의 회복을 도와주고 알츠하이머병이나 파킨슨병의 위험성을 낮춰준다고 한다.
+                    </p>
+
+                    <li><p><b>부작용</b></p></li>
+                    <p>
+                        과다 섭취 시 카페인이 중추 신경을 자극하여 불면증이 유발할 수 있다. 카페인에 대한 민감도에 따라 다르지만 잠들기 최소 6시간 전에는 섭취를 하지 않는 것이 좋다.<br><br>
+                        드립 커피 기준으로 하루에 5-6잔 이상씩 2년 정도 마시면 60% 정도에서 카페인 유발성 두통이 생긴다. 카페인 자체는 뇌혈관 순환을 촉진하여 두통을 줄여주지만, 반발성으로 카페인이 없으면 두통을 유발시킨다.<br><br>
+                        술맛을 돋우기 위해서 섞어 마시기도 하는데, 커피랑 섞어서 술이 맛있다고 많이 마시는 건 절대 삼가야 한다. 과음 자체도 해롭지만 커피랑 술을 섞은 것을 과다 복용할 경우 자칫 잘못하면 심장마비나 탈수 때문에 소화기 계통에 심각한 악영향을 끼치고 심한 경우 사망에 이를 수도 있다.
+                    </p>
+                </ul>
+            </div>
+            <hr>
+
+            <a id="mistake" class="list_title">7. 오해</a>
+            <div>
+                <p>
+                    영어권에서도 보리 알맹이를 닮은 커피 씨앗을 콩(bean)이라 부르지만 가공 과정을 볼 때 우리가 커피라 부르는 것은 생김새는 콩이나 실제로는 열매가 아니라 씨앗이다. 커피콩(coffee bean)이라는 것은 일종의 관용어인 셈이다.<br><br>
+                    커피 열매는 커피 체리(coffee cherry), 또는 커피 베리(coffee berry)라고 부르는데 아주 작은 체리나 버찌를 닮았다. 커피 체리의 과육을 벗기면 안에서 커피콩이 나오는데, 커피콩만 채취하느라 커피 체리의 과육은 대부분 그냥 버린다.
+                </p>
+            </div>
+            <hr>
+
+            <a id="tip" class="list_title">8. 즐기기 위한 팁</a>
+            <img src="https://user-images.githubusercontent.com/98439117/168507936-1f4cca60-ce69-4dea-979b-2033c8c294af.png" width="10%" height="20%" class="img3">
+            <div>
+                <p>
+                    차(Tea)와 서로 섞이기도 한다. 주로 민트향을 내는 차와 섞이는데 민트의 달콤쌉싸름함이 커피와 꽤나 잘 어울린다는 평이다.<br><br>
+                    달콤한 쿠키는 커피 맛을 높이는 파트너다. 이때 단맛이 강한 쿠키는 설탕이나 크림이 들어간 커피보다 약간 쓴맛이 나는 블랙커피가 제격이다. 추가로 하나씩 들고 커피에 찍어 먹으면 커피 액이 부드럽게 스며들어 쿠키 맛도 한결 좋아진다.<br><br>
+                    강한 느낌의 커피에는 부드럽고 풍부한 느낌의 케이크를 곁들이는 것이 좋다. 향이 강한 커피의 경우, 먹는 음식이 지나치게 강한 맛을 내면 커피의 맛을 해칠 수 있으므로 시폰, 모카 케이크처럼 약한 느낌의 부드러운 케이크가 좋다. 일반적으로 케이크 하면 생각나는 두터운 크림이 발려진 케이크도 고유의 뒷맛에서 느껴지는 느끼함을 커피가 해소시켜 줘서 인기가 높다.<br><br>
+                    도넛류와도 궁합이 잘 맞는다. 실제로 전문적인 브랜드가 있듯 도넛 자체가 너무 달거나 기름기가 많아 꺼리는 사람이라도 커피 고유의 풍미와 즐길 수 있고, 도넛의 든든한 칼로리와 커피의 향이 시너지를 내 일에 집중하고 오랫동안 수행할 수 있게 돕는다. 도넛과도 궁합이 맞기 때문에 자연스럽게 베이글 역시 커피와 함께 매우 인기 높은 식품으로 평가받고 있다.
+                </p>
+            </div>
+
+            <div>
+                <img src="https://user-images.githubusercontent.com/98439117/168507490-32438a7d-2ac1-4f2d-972c-6e8502ddffea.jpg" class="img1" width="35%" height="50%">
+            </div>
+
+        </div>
+
+        <div><!--Webtop이란?-->
+            <div>
+                <a id="webtop"><p class="introduce_1">Webtop</p></a>
+                <div class="title_name">웹탑(webtop)이란?</div>
+
+                <img src="https://user-images.githubusercontent.com/98439117/170404878-e8e953fd-3c78-4143-8f92-70d68a699383.jpg" width="15%" height="30%" class="webtop">
+                <p class="title_sub">웹탑이란 웹 데스크탑이라고도하는 웹 브라우저나 유사 클라이언트 애플리케이션에 임베디드된 데스크탑 환경이다. 임베디드는 기계 같은 제어가 필요한 시스템을 제어하기 위하여 특정기능을 수행하는 장치 안에 존재하는 전자 컴퓨팅 시스템이다. 웹탑은 웹 애플리케이션, 서버 애플리케이션, 클라이언트 애플리케이션, 웹 서비스 등을 데스크탑 메타포를 사용하여 데스크탑 환경으로 통합한다. 웹탑은 윈도우, 리눅스, 맥 시스템의 GUI와 유사한 환경을 제공하는데 GUI란 그래픽 사용자 인터페이스로 사용자가 편리하게 사용할 수 있도록 입출력 같은 기능을 알아보기 쉬운 아이콘 따위의 그래픽으로 표현한 것이다. 웹탑에서 애플리케이션, 데이터, 파일, 구성, 설정, 접근 권한은 네트워크상에 원격으로 보관되는 등 컴퓨팅의 많은 부분이 원격으로 처리된다.</p>
+                <p class="title_sub">웹탑이라는 용어는 웹 운영체제와 구별되는데, 운영체제는 시스템 하드웨어를 관리하고 응용 소프트웨어를 실행하기 위하여 하드웨어 추상화 플랫폼과 공통 시스템 서비스를 제공하는 시스템 소프트웨어다. 웹탑은 사용자가 컴퓨터를 직접 조작하지 않아도 미리 지정해 놓은 원격 인터넷 사이트에서 밀어주는 여러 정보를 검색할 수 있도록 해주는 서비스이다. 민다는 것은 푸시 기술인데 이는 인터넷이 정보를 밀어서 사용자에게 제공해준다는 뜻이다. http는 인터넷에서 클라이언트와 서버 사이에 이루어지는 요청/응답 규칙. 원래 연결이 안되고 상태가 유지되지 않는데 쿠키로 해결하며, 웹탑은 프론트엔드로 사용자가 만나는 화면이다.</p>
+            </div>
+        </div>
+
+        <div><!--WYSIWYG이란?-->
+            <div>
+                <a id="WYSIWYG"><p class="introduce_1">WYSIWYG</p></a>
+                <div class="title_name">위지위그(WYSIWYG)이란?</div>
+
+                <img src="https://user-images.githubusercontent.com/98439117/170406252-3c82e3df-2cb3-4e96-abc4-20f997aa8f30.jpg" width="15%" height="30%" class="WYSIWYG">
+                <p class="title_sub">위지위그(WYSIWYG: What You See Is What You Get, "보는 대로 얻는다")는 문서 편집 과정에서 화면에 포맷된 낱말, 문장이 출력물과 동일하게 나오는 방식을 말한다. 이는 편집 명령어를 입력하여 글꼴이나 문장 형태를 바꾸는 방식과 구별된다. 현재 대부분의 워드 프로세서는 위지위그 방식을 쓰고 있으나 HTML이나 TeX는 편집 명령어를 통해 편집하는 방식을 고수하고 있는데 이는 문서의 호환성, 범용성 때문이다.</p>
+                <p class="title_sub">위지위그 기법이 채택되기 전에, 레이아웃(여백, 공백 등)에 거의 관계없이 시스템 표준 글꼴과 스타일을 사용하여 텍스트가 편집기들에 나타났다. 사용자들은 일부 텍스트가 굵게, 기울임을 써야 하는지, 또 어떠한 크기나 글꼴을 사용해야 하는지를 지시하기 위해 특수한 비인쇄 제어 코드(현재는 마크업 코드 태그라고 함)를 입력해야 했다. 이 환경에서는 문서 편집기와 워드 프로세서 간 차이가 거의 없었다. 1974년 제록스 PARC에서 버틀러 램슨, 찰스 시모니 및 동료들이 개발한 알토용 문서 프레젠테이션 프로그램인 브라보가 일반적으로 위지위그 기술을 통합한 최초의 프로그램으로 간주되며 글꼴, 자간과 같은 형식으로 텍스트를 보여주었다.</p>
+                <p class="title_sub">게임 개발에서도 사용되며 일명 WYSWYP(What you see what you play)로 불린다. 여러가지 에디터에서 생성된 맵, 오브젝트를 테스트하기 위해서 에디터 상에서 바로 플레이 해봐서 게임개발의 편의성을 높이는 것으로, 게임을 빌드하고 다시 실행시키는 번거로움이 적어서 생산성이 높아진다. 최근에는 건축, 인테리어 등 실생활에서도 응용되고 있다.</p>
+            </div>
+        </div>
+
+        <div><!--제작 후기-->
+            <div>
+                <a id="review"><p class="introduce_1">제작 후기</p></a>
+                <div class="title_name">제작기간</div>
+                <div class="title_sub">
+                    <ul>
+                        <li>5/25 (수) ~ 5/26 (목) : 기존 웹페이지 콘텐츠 정리(Main, introduce, content, review)</li>
+                        <li>5/27 (금) ~ 5/30 (월) : 새로운 콘텐츠(Webtop, WYSWYG)추가 및 총정리</li>
+                    </ul>
+                </div>
+                <hr>
+
+                <div class="title_name">제작방법</div>
+                <img src="https://user-images.githubusercontent.com/98439117/168508019-bc785f55-cb46-4651-97fc-bb730a8fb8d1.jpg" width="25%" height="50%" class="thanks">
+
+                <p class="title_sub">우선 과제를 받은 후에 내가 좋아하는 것들 중에 어떤 것을 웹페이지 컨텐츠 주제로 선정할 지 많은 고민을 했었다. 그러다가 많은 사람들이 즐겨 마시고 부드러운 이미지를 주는 ‘커피’를 주제로 선정하게 되었다. 주제를 선정한 후에 공지되어 있는 대로 1개의 html 화면을 만들어서 목차를 이용하여 각각의 주제로 이동해야겠다고 생각했다. 그래서 각각의 주제를 메인, 나의 소개, ‘커피’ 소개, 웹탑, 위지위그, 제작 후기로 정하게 되었다. </p>
+                <p class="title_sub">저번주 과제였던 html 4개의 기존 메인페이지에서 가운데에 크게 있던 다른 페이지로 이동하는 버튼을 없애고, 이번에는 한 페이지에서 밑으로 스크롤하는 방식이기 때문에 오른쪽 중앙 화면에 고정시킨 목차(목록 누르면 각 위치로 이동)로 바꾸었습니다. </p>
+                <p class="title_sub">나를 소개하는 페이지를 만들때에는 기존 소개 페이지보다 동영상과 이미지들의 사이즈를 많이 줄였다. </p>
+                <p class="title_sub">‘커피’, ‘웹탑’, ‘위지위그’를 소개하는 페이지는 인터넷에서 여기 저기에서 정보들을 많이 정리해서 만들었다. ‘커피’에서 목차 부분에 있는 1. 개요, 2. 어원 이런거를 클릭하면 바로 밑으로 슉 내려가게 하는 법을 여기저기 찾아보다가 a태그와 id를 사용하면 되는 것을 알게 되어 이를 사용해서 목차에 있는 부분을 누르면 해당 글로 슉하고 내려가도록 제작했다. 그리고 2. 어원 부분에 사진을 넣을 때 딱 저 자리에 넣고 싶은데 그냥 사진만 넣기에 뭔가 밋밋한 느낌이 들어서 border, 즉 테두리의 종류를 이것저것 넣어보다가 저렇게 두줄? 테두리가 있길래 마음에 들어서 이렇게 만들게 되었다. 그리고 html의 여러 가지를 다 넣으려고 하다 보니까 표(table)을 어디에 무슨 맥락으로 넣어야할지 고민이 되게 많았었다. 근데 자료 조사를 하다보니 세계 각국별로 배전도를 그냥 쭉 적어놓은 게 있더라. 그래서 나는 이걸 표로 만들면 되겠구나! 라고 생각해서 표를 만들고 rowspan과 colspan을 활용해서 행과 열도 합쳐서 저런 표가 나오게 되었다.</p>
+                <p class="title_sub">그리고 배경색과 글자색 같은 CSS도 되게 많이 고민했는데 처음에는 배경색을 제목 Coffee에 그림자 중 첫번째 그림자인 핑크색보다 조금 더 연한 핑크색으로 만들었었다. 그리고 주변 친구들한테 색 어떠냐고 물어봤었는데 다들 공통적으로 눈이 아프다고 해서 고민을 하다가 커피하면 떠오르는 이미지인 갈색 계열을 배경색으로 변경하게 되었다. 배경색을 연갈색계열로 변경하면서 다른 글씨 색들을 완전 하얗게 만들거나, 원래보다 더욱 진하게 만들게 되었다.</p>
+                <hr>
+
+
+                <div class="title_name">제작자로서 하고싶은 말</div>
+                <p class="title_sub">지금까지 html이라고 하면 학교 수업시간과 매주 과제로 보고서 제출하는 것이 전부였다. 근데 이렇게 본격적으로 내가 html 웹페이지를 만들어보니 과제로 하던 것보다 훨씬 힘이 들었다. 솔직히 중간중간에 a 태그가 먹히지 않거나, 내가 원하는 위치에 이미지가 넣어지지 않고, 또 몇 번은 분명히 맞게 코딩했는데 이미지와 글씨가 막 합쳐지고, 이미지 A와 이미지 B가 있어야할 부분에 둘 다 사라져 있고 느닷없이 이미지 C가 있는 경우도 있었다. 이럴 때 정말 속상하고 뭐가 문젠지도 모르니까 정말 화가 났었다. 근데 계속 붙잡고 인터넷 여기저기 찾아보고 다시 시도해본 결과, 드디어 내가 원하는 대로 나왔을 때 너무너무 행복했고 쌓였던 스트레스가 날아가는 기분이었다.<br><br> 솔직히 에러도 초반에 되게 많이 나다가 뒤로 갈수록 에러 나는 횟수가 점점 적어져서 고치는데도 화가 안나고 끝까지 재미있게 제작할 수 있었다. 확실히 과제로만 html을 해오다가 이런 어떻게 보면 큰 과제인 ‘웹페이지 만들기’를 해보니까 힘든 것도 힘들었지만 하나하나씩 만들어가지는 과정들이 재미있었다. 그리고 지금까지 배웠던 html과 css를 한 번에 정리할 수도 있는 기회여서 정말 뜻깊은 과제였다고 생각한다.</p>
+                <hr>
+
+                <div class="title_sub_mini">
+                    <ul>!!웹페이지를 만드는 데 사용한 이미지와 음원 출처모음!!
+                        <li>이미지, 비디오 : 픽사베이(pixabay)</li>
+                        <li>음원 : 유튜브 스튜디오(Mosswood - Steve Adams)</li>
+                        <li>‘커피’, 'Webtop', 'WYSISYG' 내용 : 위키백과, 지식백과, 각종 블로그 등</li>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
